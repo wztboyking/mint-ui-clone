@@ -95,8 +95,7 @@ var doBind = function() {
   var element = directive.el;
 
   directive.scrollEventTarget = getScrollEventTarget(element);
-  console.log('bind start');
-  directive.scrollListener = throttle(doCheck.bind(directive), 200);
+  directive.scrollListener = throttle(doCheck.bind(document.body), 200);
   directive.scrollEventTarget.addEventListener('scroll', directive.scrollListener);
 
   var disabledExpr = element.getAttribute('infinite-scroll-in-body-disabled');
@@ -155,14 +154,13 @@ var doCheck = function(force) {
   var shouldTrigger = false;
 
   if (scrollEventTarget === element) {
-    console.log('1111111', scrollEventTarget.scrollHeight, viewportBottom);
     shouldTrigger = scrollEventTarget.scrollHeight - viewportBottom <= distance;
   } else {
     var elementBottom = getElementTop(element) - getElementTop(scrollEventTarget) + element.offsetHeight + viewportScrollTop;
 
     shouldTrigger = viewportBottom + distance >= elementBottom;
   }
-
+  console.log('shouldTrigger', shouldTrigger);
   if (shouldTrigger && this.expression) {
     this.expression();
   } else if (viewportScrollTop === 0) {

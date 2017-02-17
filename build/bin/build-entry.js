@@ -16,6 +16,8 @@ const install = function(Vue) {
 
 {{install}}
   Vue.use(InfiniteScroll);
+  Vue.use(InfiniteScrollTwoWays);
+  Vue.use(InfiniteScrollInBody);
   Vue.use(Lazyload, {
     loading: require('./assets/loading-spin.svg'),
     try: 3
@@ -57,6 +59,8 @@ ComponentNames.forEach(name => {
   if ([
       // directives
     'InfiniteScroll',
+    'InfiniteScrollTwoWays',
+    'InfiniteScrollInBody',
     'Lazyload',
 
       // services

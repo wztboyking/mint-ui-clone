@@ -116,6 +116,8 @@ module.exports = {
   Indicator,
   MessageBox,
   InfiniteScroll,
+  InfiniteScrollTwoWays,
+  InfiniteScrollInBody,
   Lazyload,
   DatetimePicker,
   IndexList,

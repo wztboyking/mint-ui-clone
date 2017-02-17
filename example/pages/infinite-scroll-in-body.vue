@@ -72,9 +72,8 @@
 
     methods: {
       fixedPos() {
-        var nodes = document.getElementsByClassName('page-infinite-wrapper');
-        var scrollTop = nodes[0].scrollTop;
-        nodes[0].scrollTop = scrollTop + 500;
+        var scrollTop = document.body.scrollTop;
+        document.body.scrollTop = scrollTop + 500;
       },
       loadHistory() {
         this.viewHistory = true;
