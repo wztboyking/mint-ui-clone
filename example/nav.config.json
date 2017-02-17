@@ -28,6 +28,16 @@
         "icon": "infinite-scroll"
       },
       {
+        "path": "/infinite-scroll-two-ways",
+        "name": "Infinite scroll two ways",
+        "icon": "infinite-scroll"
+      },
+      {
+        "path": "/infinite-scroll-in-body",
+        "name": "Infinite scroll in body",
+        "icon": "infinite-scroll"
+      },
+      {
         "path": "/message-box",
         "name": "Message box",
         "icon": "message-box"

@@ -26,6 +26,8 @@ import Toast from '../packages/toast';
 import Indicator from '../packages/indicator';
 import MessageBox from '../packages/message-box';
 import InfiniteScroll from '../packages/infinite-scroll';
+import InfiniteScrollTwoWays from '../packages/infinite-scroll-two-ways';
+import InfiniteScrollInBody from '../packages/infinite-scroll-in-body';
 import Lazyload from '../packages/lazyload';
 import DatetimePicker from '../packages/datetime-picker';
 import IndexList from '../packages/index-list';
@@ -66,6 +68,8 @@ const install = function(Vue) {
   Vue.component(IndexSection.name, IndexSection);
   Vue.component(PaletteButton.name, PaletteButton);
   Vue.use(InfiniteScroll);
+  Vue.use(InfiniteScrollTwoWays);
+  Vue.use(InfiniteScrollInBody);
   Vue.use(Lazyload, {
     loading: require('./assets/loading-spin.svg'),
     try: 3

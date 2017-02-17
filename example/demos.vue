@@ -38,7 +38,8 @@
   @component-namespace page {
     @component title {
       font-size: 20px;
-      margin: 20px auto;
+      padding: 20px 0;
+      margin: 0 auto;
       text-align: center;
       display: block;
       line-height: 1;
